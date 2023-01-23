@@ -32,42 +32,32 @@
         <!-- Sektionen omringar artiklar (eg. blogposts)-->
         <section>
 
-        <?php
-        //Php script syns inte på klienten, de körs på servern efter att klienten har bett om ett dokument
-        //phpinfo();
 
-        /*Upg 1 - systemareorna och superglobals */
-        print("<p>Servern snurrar på port " .$_SERVER['REMOTE_PORT'] . ", som vanligt med https och apache.");
-        ?>
 
             <!-- Artiklar placerar sig snyggt nedanför varann-->
             <article>
-                <h2>Bloggen - Inlägg 1</h2>
-                <p>Denapappas memoarer</p>
+                <h2>Uppgift 1 - superglobals </h2>
+                <?php include "uppg1.php"; ?>
+
             </article>
-            <div class="separator"></div>
+            <div class="seperator"></div>
 
             <article>
-                <h2>Bloggen - Inlägg 2</h2>
-                <p>Elcyklar och solkraft</p>
+                <h2>Uppgift 2 - Datum & tid </h2>
+                <?php include "uppg2.php"; ?>
             </article>
+            <div class="seperator"></div>
 
             <article>
-                <h2>Uppgift 2 Datum & tid</h2>
-                <?php
-                $datum = date("d.M.Y");
-
-                print("Dagens datum är: <br>" .$datum);
-                //Arrays
-                $veckodagar = array("Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag","Söndag");
-                print("<br>Idag är det veckodag nr: " .date("l"));
-                print("<p>Förrsöker igen, är det veckodag nr: " .date("m")." då");
-
-                print("<p>Veckodag nummer 01 betyder att det är " .$veckodagar[0] . "</p>")
-
-
-                ?>
+                <h2>Uppgift 3 - formulär </h2>
+                <form action="index.php" method="GET">
+                    Name: <input type="text" name="name"><br>
+                    E-mail: <input type="text" name="email"><br>
+                    <input type="submit">
+                </form>
+                <?php include "uppg3.php"; ?>
             </article>
+
 
         </section>
 
