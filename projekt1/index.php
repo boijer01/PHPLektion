@@ -1,3 +1,4 @@
+<?php include "handy_methods.php"; ?>
 <!DOCTYPE html>
 
 <head>
