@@ -1,5 +1,6 @@
 <?php
-
+//start the session
+session_start();
 // allt möjlgt viktigt som vi använder ofta, sessionshantering, form validation, etc.
 
 
