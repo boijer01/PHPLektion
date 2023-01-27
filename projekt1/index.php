@@ -52,12 +52,24 @@
             <article>
                 <h2>Uppgift 3 - formulär </h2>
                 <form action="index.php" method="GET">
-                    Name: <input type="text" name="name"><br>
-                    E-mail: <input type="text" name="email"><br>
+                    Dag: <input type="text" name="day"><br>
+                    Månad: <input type="text" name="month"><br>
                     <input type="submit">
                 </form>
                 <?php include "uppg3.php"; ?>
             </article>
+
+            
+            <article>
+                <h2>Uppgift 4 - Registrera </h2>
+                <form action="index.php" method="GET">
+                    Namn <input type="text" name="namn"><br>
+                    email <input type="text" name="email"><br>
+                    <input type="submit">
+                </form>
+                <?php include "uppg4.php"; ?>
+            </article>
+
 
 
         </section>
