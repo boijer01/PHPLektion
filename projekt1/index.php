@@ -63,7 +63,7 @@
             <article>
                 <h2>Uppgift 4 - Registrera </h2>
                 <form action="index.php" method="GET">
-                    Namn <input type="text" name="namn"><br>
+                    Namn <input type="text" name="name"><br>
                     email <input type="text" name="email"><br>
                     <input type="submit">
                 </form>
