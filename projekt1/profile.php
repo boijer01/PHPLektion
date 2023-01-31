@@ -24,8 +24,21 @@
             <article>
                 <h2>Profilsida</h2>
                 <?php include "uppg6.php" ?>
+
+
             </article>
             <div class="separator"></div>
+
+            
+            <?php if (isset($_SESSION['username'])) { ?>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                Select image to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload Image" name="submit">
+            </form>
+            <?php } ?> 
+        
+
 
         </section>
 
