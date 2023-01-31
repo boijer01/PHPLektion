@@ -23,6 +23,12 @@
 
             <!-- Artiklar placerar sig snyggt nedanför varann-->
             <article>
+                <h2>Uppgift 8</h2>
+                <?php include "uppg8.php" ?>
+            </article>
+            <div class="separator"></div>
+
+            <article>
                 <h2>Uppgift 1 - Superglobals</h2>
                 <?php include "uppg1.php" ?>
             </article>
