@@ -10,6 +10,10 @@ if (isset($_SESSION['username'])) {
     //Printar ut bilden på sidan
     print('<img src="pictures/'.$bilder[2].'" alt="Profilbild">');
 }
+
+
+//Profilbilds upload
+
 ?>
 
 
