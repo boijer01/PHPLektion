@@ -1,22 +1,22 @@
 
+<?php 
+    // Lite övningar med time() och mktime()
+    if(!empty($_REQUEST["day"]) && !empty($_REQUEST["month"])) {
 
-<?php
+        $day = test_input($_REQUEST["day"]);
+        $month = test_input($_REQUEST["month"]);
+        print("<p>Du matade in dagen #". $day . " i månaden ". $month ."<br>");
 
+        $tidnu = time();
+        print("Just nu är det " . $tidnu . " sekunder sedan tidens begynnelse<br>");
 
-//Lite övningar med time() och mktime()
-if (!empty($_REQUEST["day"]) && !empty($_REQUEST["month"])) {
+        $inmatadtid = mktime(12, 01, 00, $month, $day, 2023);
+        print("Du undrar ifall " .$inmatadtid . " är i framtiden eller det förflutna?<br>");
 
-    $dag = test_input($_REQUEST["day"]);
-    print("<p>Du matade in dagen #" . $dag . " i månaden ".$month."</p>");
+        // To-Do: Logiken!!
+        $diff = $tidnu - $inmatadtid;
+        print("Differensen är ".$diff." sekunder");
 
-    $tidnu = time();
-    print("Just nu är det " . $tidnu . " sekunder sedan 1970-01-01 00:00:00 UTC");
+    }
 
-    $inmatadTid = mktime(12, 01, 0, $month, $dag, 2023);
-    print("<br>Du undrar ifall " . $inmatadTid . " är i framtiden eller i det förflutna");
-
-    // to-do logiken
-    $diff = $tidnu - $inmatadTid;
-    print ("Differensen är ".$diff." sekunder");
-}
-?> 
+?>
