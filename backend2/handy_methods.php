@@ -22,7 +22,7 @@ include "hemlis.php";
 
 // Create connection
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Rekommenderas att lägga till
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname); // mysqli objekt
 
 // Check connection
 if ($conn->connect_error) {
