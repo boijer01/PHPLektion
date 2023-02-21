@@ -19,4 +19,14 @@ $username = "boijersi";
 include "hemlis.php";
 // hemlis.php ser ut såhär
 // <?php $password = "sup3rh3mlis";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
 ?>
