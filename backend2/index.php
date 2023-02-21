@@ -24,11 +24,16 @@
             <!-- Artiklar placerar sig snyggt nedanför varann-->
             <article>
                 <h2>Profiles</h2>
-                <?php include "view_profiles.php" ?>
+                <?php include "./view_profiles.php" ?>
             </article>
             <div class="separator"></div>
 
-            
+            <article>
+                <h2>Login includes nedan</h2>
+                <?php include "./view_login.php" ?>
+            </article>
+            <div class="separator"></div>
+
 
         </section>
 
