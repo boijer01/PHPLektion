@@ -21,7 +21,8 @@ include "hemlis.php";
 // <?php $password = "sup3rh3mlis";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Rekommenderas att lägga till
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
