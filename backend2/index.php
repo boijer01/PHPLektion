@@ -4,36 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dennis Back-end template</title>
+    <title>Dennis Dejtar</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
 </head>
 
 <body>
 
     <div id="container">
-        <!-- Max 800px bred container-->
-
         <?php include "header.php" ?>
-
-        <!-- Sektionen omringar artiklar (eg. blogposts)-->
         <section>
 
-
-
-            <!-- Artiklar placerar sig snyggt nedanför varann-->
             <article>
-                <h2>Profiles</h2>
+                <h2>Välkommen till dennis dejtar!</h2>
                 <?php include "./view_profiles.php" ?>
             </article>
-            <div class="separator"></div>
 
             <article>
-                <h2>Login includes nedan</h2>
+                <h2>Login includas nedan</h2>
                 <?php include "./view_login.php" ?>
             </article>
-            <div class="separator"></div>
-
 
         </section>
 

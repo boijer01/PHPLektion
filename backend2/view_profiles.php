@@ -1,6 +1,6 @@
 <h2>Annonser</h2>
-<p>Föjande annonser finns på dejtingsajten</p>
+<p>Följande annonser finns på dejtingsajten</p>
 
-<?php include "model_profiles.php";
+<?php include "model_profiles.php" ?>
 
-// ToDo: kör en sql kod på databasen
+<!-- ToDo: Visa upp annonserna vettigt -->
