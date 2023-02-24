@@ -20,9 +20,9 @@ include "hemlis.php";
 // hemlis.php ser ut såhär
 // <?php $password = "sup3rh3mlis";
 
-// Create connection
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Rekommenderas att lägga till
-$conn = new mysqli($servername, $username, $password, $dbname); // mysqli objekt
+// Create connection 
+//mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Rekommenderas att lägga till
+$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
 // Check connection
 if ($conn->connect_error) {
@@ -31,3 +31,4 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 ?>
+

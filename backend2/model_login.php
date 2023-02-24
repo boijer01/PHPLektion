@@ -12,18 +12,19 @@ if (!empty($_REQUEST['username']) && !empty($_REQUEST['pass'])) {
     
     // Skydd för SQL injection (prepared statement!)
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $user, $pass);
+    //$stmt->bind_param("ss", $user, $pass); Behövs ej, bytt yill PDO
     
     // execute() returnerar FALSE on failure
-    if ($stmt->execute()) {
+    if ($stmt->execute($user, $pass)) { //New and improved i och med PDO
         // Prepare, bind_param och execute returnar alla bara true eller false.
         // För att hämta datan måste vi använda t.ex. get_result() för att få ett mysqli_result objekt som med query()
-        $result = $stmt->get_result();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
         // $result är ett mysqli_result objekt och har egenskapen num_rowss
-        if ($result->num_rows > 0) {
+        if ($result) {
             print("Användarnamn och lösenord korrekt!");
+            $_SESSION['username'] = $user;
         }        
-        // Om lyckad login, spara användarnamn i sessionsvariabel
+        // Om lyckad login, spara användarnamn i sessionsvariabel :)
         // Refresha sidan om 5 sek (för att fixa form resubmission problemet)
     }
     else {
