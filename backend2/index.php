@@ -16,6 +16,7 @@
 
             <article>
                 <h2>Välkommen till dennis dejtar!</h2>
+                
                 <?php include "./view_profiles.php" ?>
             </article>
 

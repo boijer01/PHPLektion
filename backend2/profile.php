@@ -17,6 +17,8 @@
             <article>
                 <h2>Här är din profil</h2>
                 <?php include "./view_account.php" ?>
+                <h2>Kommentarer på din profil</h2>
+                <?php include "view_comments.php"?>
             </article>
 
         

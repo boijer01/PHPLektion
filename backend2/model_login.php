@@ -8,7 +8,7 @@ if (!empty($_REQUEST['username']) && !empty($_REQUEST['pass'])) {
     // Kom ihåg! Hasha lösenordet!
 
     // Formulera SQL statement
-    $sql = "SELECT username,password FROM profiles WHERE username=? AND password=?";
+    $sql = "SELECT id,username,password FROM profiles WHERE username=? AND password=?";
     
     // Skydd för SQL injection (prepared statement!)
     $stmt = $conn->prepare($sql);
@@ -26,6 +26,7 @@ if (!empty($_REQUEST['username']) && !empty($_REQUEST['pass'])) {
             print("Hashen för ditt lösenord är: ". $hash);
             //Obs - i registeringsskede ska ni spara enbart
             $_SESSION['username'] = $user;
+            $_SESSION['reciever_id'] = $result['id']; //Spara mottagarens id i sessionen
         } else {
             print("Nice try!");    
         // Om lyckad login, spara användarnamn i sessionsvariabel :)
